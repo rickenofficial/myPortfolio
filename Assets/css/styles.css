@@ -1,0 +1,174 @@
+:root {
+    --navlink-color: #92cccd;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    width: min(95%, 70rem);
+    background-color: rgb(21, 39, 67);
+    color: var(--navlink-color);
+}
+
+.header-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+}
+
+h1 {
+    font-size: 200%;
+    background-color: var(--navlink-color);
+    color: #31343d;
+}
+
+h2 {
+    margin: 2% 0;
+    font-size: 250%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    min-width: 300px;
+    list-style: none;
+    text-decoration: underline;
+}
+
+nav a {
+    background-color: unset;
+    color: var(--navlink-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #4165f3;
+}
+
+.hero-image {
+    background-color: black;
+    background-image: url(stripe-pattern-blue-color-line-wallpaper-free-vector-4283209560.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text {
+    text-align: right;
+    position: relative;
+    padding-right: 50px;
+}
+
+.hero-text h1 {
+    background-color: var(--navlink-color);
+    padding: 10px 20px;
+    display: inline;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+main {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    padding-block: 2rem;
+    width: min(95%, 70rem);
+}
+
+.section-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-content {
+    flex: 1;
+    padding-left: 20px;
+}
+
+#my-work-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#apps-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#apps-container > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    position: relative;
+}
+
+#apps-container > a .image-title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#apps-container > a:hover .image-title {
+    opacity: 1;
+}
+#app2 img,
+#app3 img {
+    width: 100%;
+    max-width: 300px;
+    height: 300px; 
+    object-fit: cover; 
+    margin-bottom: 20px;
+}
+.title-container {
+    display: flex;
+    align-items: center;
+}
+
+.title-line {
+    height: 100%;
+    width: 5px;
+    background-color: black;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    
+    main {
+        max-width: 1200px;
+    }
+}
